@@ -1,12 +1,13 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 
-const insuranceRoutes = require("./routes/insuranceQuotes")
+const insuranceQuoteRoutes = require("./routes/insuranceQuotes")
 
 const app = express()
 
 app.use(bodyParser.json())
-app.use("/api", insuranceRoutes)
+
+app.use("/api", insuranceQuoteRoutes)
 
 app.listen(8080)
 
