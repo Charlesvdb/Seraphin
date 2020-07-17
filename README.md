@@ -1,3 +1,5 @@
+# SERAPHIN
+
 # 2 KEY COMPONENTS
 
 Simple insurance product with 2 key components:
@@ -56,3 +58,31 @@ Body Parameters:
         "success": false,
         "message": "parameters missing or incorrect values"
     }
+
+# HOW TO USE
+
+git clone REPO_NAME
+cd REPO_NAME
+npm install
+npm run test
+
+curl -X POST -H "Content-Type: application/json" localhost:8080/api/v1/quote/car-insurance --data '{"car_value": 20000.0, "driver_birthdate": "15/10/1990"}'
+
+# CODE
+
+## app.js file
+
+## app.js file
+
+## app.js file
+
+## app.js file
+
+## app.js file
+
+## DEPENDENCIES
+
+# TESTING
+
+
+
