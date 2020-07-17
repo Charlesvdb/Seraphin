@@ -19,12 +19,12 @@ _________________________________________________________________
 
 # Node.js HTTP REST API
 
-http://localhost:8080/v1/quote/car-insurance
+POST Quote: http://localhost:8080/v1/quote/car-insurance
 
 ## Request:
 Body Parameters:
-- car_value - REQUIRED number - Float, value of the car excl. VAT
-- driver_birthdate - REQUIRED string - Of the form "DD/MM/YYYY"
+- car_value - REQUIRED -  number - Float, value of the car excl. VAT
+- driver_birthdate - REQUIRED - string - Of the form "DD/MM/YYYY"
 
 ## Response:
 ### 200: OK (All parameters present)

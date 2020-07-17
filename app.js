@@ -1,13 +1,12 @@
-///launching server on 8080
 const express = require("express")
 const bodyParser = require("body-parser")
 
-const theQuoteRoutes = require("./routes/quote")
+const insuranceRoutes = require("./routes/insuranceQuotes")
 
 const app = express()
 
 app.use(bodyParser.json())
-app.use("/api", theQuoteRoutes)
+app.use("/api", insuranceRoutes)
 
 app.listen(8080)
 
