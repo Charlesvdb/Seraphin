@@ -28,29 +28,29 @@ Body Parameters:
 ### 200: OK (All parameters present)
 // Driver eligible for the insurance
     {
-    "success": true,
-    "message": "quote successfully computed",
-    "data": {
-        "eligible": true,
-        "premiums": {
-            "civil_liability": 1000.00,
-            "omnium": 702.4
+        "success": true,
+        "message": "quote successfully computed",
+        "data": {
+            "eligible": true,
+            "premiums": {
+                "civil_liability": 1000.00,
+                "omnium": 702.4
+            }
         }
-    }
     }  
 
 // Driver NOT eligible for the insurance
-{
-    "success": true,
-    "message": "quote successfully computed",
-    "data": {
-        "eligible": false,
-        "premiums": null
+    {
+        "success": true,
+        "message": "quote successfully computed",
+        "data": {
+            "eligible": false,
+            "premiums": null
+        }
     }
-}
 
 ### 400: Bad request (Parameters missing or incorrect values)
-{
-    "success": false,
-    "message": "parameters missing or incorrect values"
-}
+    {
+        "success": false,
+        "message": "parameters missing or incorrect values"
+    }
