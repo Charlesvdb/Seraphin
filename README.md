@@ -13,6 +13,8 @@ Simple insurance product with 2 key components:
 - Not eligible for drivers under 18 years old (excluded)
 - Costs 3% of the value of the car
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Node.js HTTP REST API
 
 http://localhost:8080/v1/quote/car-insurance
@@ -25,17 +27,17 @@ Body Parameters:
 Response:
 200: OK (All parameters present)
 // Driver eligible for the insurance
-{
-    "success": true,
-    "message": "quote successfully computed",
-    "data": {
-        "eligible": true,
-        "premiums": {
-            "civil_liability": 1000.00,
-            "omnium": 702.4
+    {
+        "success": true,
+        "message": "quote successfully computed",
+        "data": {
+            "eligible": true,
+            "premiums": {
+                "civil_liability": 1000.00,
+                "omnium": 702.4
+            }
         }
-    }
-}  
+    }  
 
 // Driver NOT eligible for the insurance
 {
