@@ -1,4 +1,4 @@
-# Seraphin
+# 2 KEY COMPONENTS
 
 Simple insurance product with 2 key components:
 1) Civil liability:
