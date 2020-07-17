@@ -27,6 +27,7 @@ Body Parameters:
 ## Response:
 ### 200: OK (All parameters present)
 // Driver eligible for the insurance
+    
     {
         "success": true,
         "message": "quote successfully computed",
@@ -40,6 +41,7 @@ Body Parameters:
     }  
 
 // Driver NOT eligible for the insurance
+    
     {
         "success": true,
         "message": "quote successfully computed",
