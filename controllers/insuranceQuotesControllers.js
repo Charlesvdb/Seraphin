@@ -1,12 +1,10 @@
 //Does all computations and sends back correct messages
 
-const {validationResult} = require("express-validator");
-const birthdateDriver = req.body.driver_birthdate
-const ageDriver = driverAge(birthdateDriver)
-
-
 exports.postInsuranceQuotes = (req,res) => {
     const errors = validationResult(req)
+    const {validationResult} = require("express-validator");
+    const birthdateDriver = req.body.driver_birthdate
+    const ageDriver = driverAge(birthdateDriver)
 
     if(!errors.isEmpty()){
         return res.status(400).json({
@@ -34,5 +32,5 @@ const civilLiability = (age) => {
 }
 
 const omnium = () => {
-    return req.body.car_value * 0.03
+    return (req.body.car_value * 0.03).toFixed(2)
 }
