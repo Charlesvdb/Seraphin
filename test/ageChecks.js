@@ -3,14 +3,14 @@ const expect = chai.expect;
 const assert = require('chai').assert;
 const quote = require('../controllers/insuranceQuotesControllers');
 const app = require('../app');
-const url = "/api/v1/quote/car-insurance";
+const pathUrl = "/api/v1/quote/car-insurance";
 
 chai.use(require("chai-http"));
 
 describe ('is person eligible for an insurance premium?', () => {
     it('should return TRUE if the person is at least 18Y old', () =>{
       chai.request('http://localhost:8080')
-      .post(url)
+      .post(pathUrl)
       .set('Accept', 'application/json')
       .send({
               "car_value": 15000.00,
@@ -24,7 +24,7 @@ describe ('is person eligible for an insurance premium?', () => {
 
 it('should return FALSE if the driver is younger than 18Y old', ()=>{
     chai.request('http://localhost:8080')
-    .post(url)
+    .post(pathUrl)
     .set('Accept', 'application/json')
     .send({
             "car_value": 13000.00,
