@@ -75,9 +75,17 @@ describe ('400 error status', () => {
         })
     });
 
-
-
-
-
+    it('should return status 400 error if wrong date format is used for years', ()=>{
+        chai.request('http://localhost:8080')
+        .post(pathUrl)
+        .set('Accept', 'application/json')
+        .send({
+                "car_value": 12000,
+                "driver_birthdate": "12/03/1000000000000"
+              })
+        .end((err, res) => {
+          assert.equal(res.status, 400, "status 400")
+        })
+    });
 
 })    
