@@ -35,7 +35,6 @@ it('should return FALSE if the driver is younger than 18Y old', ()=>{
       assert.equal(res.body.data.eligible, false)
     })
   });
-
 })
 
 
