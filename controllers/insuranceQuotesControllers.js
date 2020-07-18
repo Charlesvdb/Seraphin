@@ -30,7 +30,7 @@ exports.postInsuranceQuotes = (req,res) => {
             data: {
                 eligible: true,
                 premiums: {
-                    civil_liability: civilLiability = (ageDriver),
+                    civil_liability: civilLiability(ageDriver),
                     omnium: omnium()
                 }
             }
