@@ -60,6 +60,5 @@ describe ('200 message status', () => {
           assert.equal(res.body.data.premiums.omnium, res.request._data.car_value * 0.03)
         })
       });
-
 })
 
