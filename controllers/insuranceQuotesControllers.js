@@ -14,6 +14,29 @@ exports.postInsuranceQuotes = (req,res) => {
         })
     }
 
+    if(ageDriver < 18){
+        res.status(200).json({
+            success: true,
+            message: "quote successfully computed",
+            data: {
+                eligible: false,
+                premiums: null
+            }
+        })
+    } else if(ageDriver >= 18){
+        res.status(200).json({
+            success: true,
+            message: "quote successfully computed",
+            data: {
+                eligible: true,
+                premiums: {
+                    civil_liability: civilLiability = (ageDriver),
+                    omnium: omnium()
+                }
+            }
+        });
+    }
+
 }
 
 
@@ -28,8 +51,8 @@ const driverAge = (birthdateDriver) => {
     return Math.abs(ageCalculation.getUTCFullYear - 1970)
 }
 
-const civilLiability = (age) => {
-    return (age > 25) ? 500.00 : 1000.00
+const civilLiability = (ageDriver) => {
+    return (ageDriver > 25) ? 500.00 : 1000.00
 }
 
 const omnium = () => {
