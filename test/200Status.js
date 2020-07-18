@@ -27,20 +27,21 @@ describe ('200 message status', () => {
       });
 
 
-    it('should return 200 status message if person up to 25 years and eligible', ()=>{
+    it('should return 200 status message if person older than 18 but below or equal to 25 years AND eligible', ()=>{
       chai.request('http://localhost:8080')
       .post(pathUrl)
       .set('Accept', 'application/json')
       .send({
               "car_value": 13000.00,
-              "driver_birthdate": "11/01/2013"
+              "driver_birthdate": "11/01/1996"
             })
       .end((err, res) => {
         assert.equal(res.body.success, true)
         assert.equal(res.body.message, "quote successfully computed")
         assert.equal(res.body.data.eligible, true)
         assert.equal(res.body.data.premiums.civil_liability, 1000)
-        assert.equal(res.body.data.premiums.omnium, res.request._data.car_value * 0.03)
+        assert.equal(res.body.data.premiums.omnium, 13000.00 * 0.03)
+        // res.request._data.car_value
       })
     });
 
