@@ -1,4 +1,4 @@
-//all 400 status errors in initial post input phase
+//all 400 status errors in initial post input phase (body parameters)
 
 const chai = require("chai")
 const expect = chai.expect;
