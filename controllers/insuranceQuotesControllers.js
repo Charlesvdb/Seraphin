@@ -3,7 +3,7 @@
 const {validationResult} = require("express-validator");
 const birthdateDriver = req.body.driver_birthdate
 const ageDriver = driverAge(birthdateDriver)
-const omniumAmount = req.body.car_value * 0.03
+
 
 exports.postInsuranceQuotes = (req,res) => {
     const errors = validationResult(req)
@@ -14,7 +14,6 @@ exports.postInsuranceQuotes = (req,res) => {
             "message": "parameters missing or incorrect values"
         })
     }
-
 
 }
 
@@ -28,4 +27,8 @@ const driverAge = (birthdateDriver) => {
     const dateOfToday = Date.now()
     const ageCalculation = new Date(dateOfToday - dateOfBirth)
     return Math.abs(ageCalculation.getUTCFullYear - 1970)
+}
+
+const civilLiability = (age) => {
+    return (age > 25) ? 500.00 : 1000.00
 }
