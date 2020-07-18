@@ -23,7 +23,7 @@ describe ('400 error status', () => {
       })
     });
 
-    it('should return status 400 erro if driver_birthdate is not given', ()=>{
+    it('should return status 400 error if driver_birthdate is not given', ()=>{
         chai.request('http://localhost:8080')
         .post(pathUrl)
         .set('Accept', 'application/json')
@@ -35,6 +35,21 @@ describe ('400 error status', () => {
           assert.equal(res.status, 400, "status 400")
         })
     });
+
+    it('should return status 400 error if car_value is string', ()=>{
+        chai.request('http://localhost:8080')
+        .post(pathUrl)
+        .set('Accept', 'application/json')
+        .send({
+                "car_value": "thisisastring",
+                "driver_birthdate": "12/08/1993"
+              })
+        .end((err, res) => {
+          assert.equal(res.status, 400, "status 400")
+        })
+    });
+
+    
 
 
 })    
