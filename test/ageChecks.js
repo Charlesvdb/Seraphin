@@ -1,3 +1,5 @@
+//all age-related testing with 18Y old as cutoff point
+
 const chai = require("chai")
 const expect = chai.expect;
 const assert = require('chai').assert;

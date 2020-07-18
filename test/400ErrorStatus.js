@@ -1,9 +1,12 @@
+//all 400 status errors in initial post input phase
+
 const chai = require("chai")
 const expect = chai.expect;
 const assert = require('chai').assert;
 const quote = require('../controllers/insuranceQuotesControllers');
 const app = require('../app');
-const url = "/api/v1/quote/car-insurance";
+const pathUrl = "/api/v1/quote/car-insurance";
 
 chai.use(require("chai-http"));
+
 
