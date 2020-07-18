@@ -20,6 +20,8 @@ describe ('400 error status', () => {
             })
       .end((err, res) => {
         assert.equal(res.status, 400, "status 400")
+        assert.equal(res.body.success, false)
+        assert.equal(res.body.message, 'parameters missing or incorrect values')
       })
     });
 
@@ -33,6 +35,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
@@ -46,6 +50,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
@@ -59,6 +65,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
@@ -72,6 +80,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
@@ -85,6 +95,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
