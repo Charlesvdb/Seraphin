@@ -32,3 +32,7 @@ const driverAge = (birthdateDriver) => {
 const civilLiability = (age) => {
     return (age > 25) ? 500.00 : 1000.00
 }
+
+const omnium = () => {
+    return req.body.car_value * 0.03
+}
