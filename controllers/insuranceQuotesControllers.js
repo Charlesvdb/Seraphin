@@ -3,9 +3,9 @@
 const {validationResult} = require("express-validator");
 
 exports.postInsuranceQuotes = (req,res) => {
-    const errors = validationResult(req)
-    const birthdateDriver = req.body.driver_birthdate
-    const ageDriver = driverAge(birthdateDriver)
+    const errors = validationResult(req);
+    const birthdateDriver = req.body.driver_birthdate;
+    const ageDriver = driverAge(birthdateDriver);
 
     if(!errors.isEmpty()){
         return res.status(400).json({

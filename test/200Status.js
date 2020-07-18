@@ -12,7 +12,7 @@ chai.use(require("chai-http"));
 describe ('200 message status', () => {
     it('should return the 200 status message if the person is not eligible', ()=>{
         chai.request('http://localhost:8080')
-        .post(url)
+        .post(pathUrl)
         .set('Accept', 'application/json')
         .send({
                 "car_value": 22000.00,
@@ -29,7 +29,7 @@ describe ('200 message status', () => {
 
     it('should return 200 status message if person up to 25 years and eligible', ()=>{
       chai.request('http://localhost:8080')
-      .post(url)
+      .post(pathUrl)
       .set('Accept', 'application/json')
       .send({
               "car_value": 13000.00,
@@ -46,7 +46,7 @@ describe ('200 message status', () => {
 
     it('should return 200 status message if person older than 25 years and eligible', ()=>{
         chai.request('http://localhost:8080')
-        .post(url)
+        .post(pathUrl)
         .set('Accept', 'application/json')
         .send({
                 "car_value": 10000.00,
