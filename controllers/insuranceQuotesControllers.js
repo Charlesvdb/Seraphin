@@ -1,8 +1,9 @@
 //Does all computations and sends back correct messages
 
+const {validationResult} = require("express-validator");
+
 exports.postInsuranceQuotes = (req,res) => {
     const errors = validationResult(req)
-    const {validationResult} = require("express-validator");
     const birthdateDriver = req.body.driver_birthdate
     const ageDriver = driverAge(birthdateDriver)
 

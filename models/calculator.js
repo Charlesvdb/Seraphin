@@ -1,1 +1,0 @@
-//does all background calculations
