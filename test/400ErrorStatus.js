@@ -1,5 +1,7 @@
 //all 400 status errors in initial post input phase (body parameters)
 
+// all 6 tests working
+
 const chai = require("chai")
 const expect = chai.expect;
 const assert = require('chai').assert;
@@ -20,8 +22,8 @@ describe ('400 error status', () => {
             })
       .end((err, res) => {
         assert.equal(res.status, 400, "status 400")
-        // assert.equal(res.body.success, false)
-        // assert.equal(res.body.message, 'parameters missing or incorrect values')
+        assert.equal(res.body.success, false)
+        assert.equal(res.body.message, 'parameters missing or incorrect values')
       })
     });
 
@@ -35,8 +37,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
-          // assert.equal(res.body.success, false)
-          // assert.equal(res.body.message, 'parameters missing or incorrect values')
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
@@ -50,8 +52,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
-          // assert.equal(res.body.success, false)
-          // assert.equal(res.body.message, 'parameters missing or incorrect values')
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
@@ -65,8 +67,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
-          // assert.equal(res.body.success, false)
-          // assert.equal(res.body.message, 'parameters missing or incorrect values')
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
@@ -80,8 +82,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
-          // assert.equal(res.body.success, false)
-          // assert.equal(res.body.message, 'parameters missing or incorrect values')
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
 
@@ -95,9 +97,8 @@ describe ('400 error status', () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 400, "status 400")
-          // assert.equal(res.body.success, false)
-          // assert.equal(res.body.message, 'parameters missing or incorrect values')
+          assert.equal(res.body.success, false)
+          assert.equal(res.body.message, 'parameters missing or incorrect values')
         })
     });
-
 })    

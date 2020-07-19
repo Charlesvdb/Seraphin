@@ -1,4 +1,6 @@
-//all age-related testing with 18Y old as cutoff point
+//all age-related testing with 18Y old as cut-off point
+
+//all 2 tests working
 
 const chai = require("chai")
 const expect = chai.expect;
@@ -34,7 +36,7 @@ describe ('Is person eligible for an insurance premium?', () => {
               "driver_birthdate": "23/01/1980"
             })
       .end((err, res) => {
-        // assert.equal(res.status, 200, "Status OK 200")
+        assert.equal(res.status, 200, "Status OK 200")
         assert.equal(res.body.data.eligible, true)
     })
     });

@@ -1,5 +1,7 @@
 // all background calculations checks
 
+// all 2 tests working
+
 const chai = require("chai")
 const expect = chai.expect;
 const assert = require('chai').assert;
@@ -20,12 +22,12 @@ describe("Calculation civilLiability", () => {
               })
         .end((err, res) => {
           assert.equal(res.status, 200, "Status OK 200")
-          assert.equal(res.body.data.premiums.civil_liability, 1000)
+          assert.equal(res.body.data.premiums.civil_liability, 1000.00)
           assert.equal(res.body.data.eligible, true)
         })
   })
 
-  it("should return 500 if person's age is above 25", ()=>{
+  it("should return 500 premium if person's age is above 25", ()=>{
     chai.request('http://localhost:8080')
     .post(pathUrl)
     .set('Accept', 'application/json')
@@ -35,7 +37,7 @@ describe("Calculation civilLiability", () => {
           })
     .end((err, res) => {
       assert.equal(res.status, 200, "Status OK 200")
-      assert.equal(res.body.data.premiums.civil_liability, 500)
+      assert.equal(res.body.data.premiums.civil_liability, 500.00)
     })
   });
 })
