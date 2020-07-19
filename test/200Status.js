@@ -11,14 +11,29 @@ chai.use(require("chai-http"));
 
 describe ('200 message status', () => {
     it('should return the 200 status message if the person is not eligible', ()=>{
+      chai.request('http://localhost:8080')
+      .post(pathUrl)
+      .set('Accept', 'application/json')
+      .send({
+              "car_value": 22000.00,
+              "driver_birthdate": "17/11/2010"
+            })
+      .end((err, res) => {
+        assert.equal(res.status, 200, "Status OK 200")
+      })
+    });
+
+  
+    it('should return the 200 status message if the person is eligible', ()=>{
         chai.request('http://localhost:8080')
         .post(pathUrl)
         .set('Accept', 'application/json')
         .send({
-                "car_value": 22000.00,
-                "driver_birthdate": "17/11/2010"
+                "car_value": 10000.00,
+                "driver_birthdate": "17/11/1990"
               })
         .end((err, res) => {
+          assert.equal(res.status, 200, "Status OK 200")
           assert.equal(res.body.success, true)
           assert.equal(res.body.message, "quote successfully computed")
           assert.equal(res.body.data.eligible, false)

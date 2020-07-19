@@ -72,18 +72,32 @@ npm run test
 # CODE
 
 ## app.js file
+Starts server & does body-parser
 
-## app.js file
+## insuranceQuotes.js
+Does the initial body parameters validation.
+Checks for missing parameters or incorrect values. 
 
-## app.js file
+## insuranceQuotesControllers.js
+Calculates civil liability & omnium premiums.
+Decided to keep background calculations (age, civil liability, omnium) in this file (instead of creating a calculations file) to keep it simple.
+Sends back correct message (200 status vs. 400 status).
 
-## app.js file
-
-## app.js file
+## TESTING
+4 test files:
+- 400ErrorStatus.js: tests 400 status error messages
+- 200Status.js: tests 200 status messages 
+- ageCheck.js: tests eligibility
+- calculationsQuotes: tests background calculations such as omnium, civil liability and age 
 
 ## DEPENDENCIES
-
-# TESTING
-
-
-
+    "dependencies": {
+    "body-parse": "^0.1.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0"
+    },
+    "devDependencies": {
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4"
