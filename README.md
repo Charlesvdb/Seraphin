@@ -64,10 +64,7 @@ Body Parameters:
 # HOW TO USE (TODO)
 
 ## Terminal
-git clone REPO_NAME
-cd REPO_NAME
-npm install
-npm run test
+git clone https://github.com/Charlesvdb/Seraphin.git
 
 ## Curl example
     curl -X POST -H "Content-Type: application/json" localhost:8080/api/v1/quote/car-insurance --data '{"car_value": 20000.0, "driver_birthdate": "15/10/1990"}'
