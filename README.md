@@ -89,7 +89,7 @@ Sends back correct message (200 status vs. 400 status).
 - 400ErrorStatus.js: tests 400 status error messages
 - 200Status.js: tests 200 status messages 
 - ageCheck.js: tests eligibility
-- calculationsQuotes: tests background calculations such as omnium, civil liability and age 
+- calculationsQuotes: tests background calculations such as civil liability and age 
 
 ## DEPENDENCIES
     "dependencies": {
@@ -102,3 +102,9 @@ Sends back correct message (200 status vs. 400 status).
     "devDependencies": {
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4"
+
+## VISUAL OVERVIEW
+
+<img src="/visualOverview.png">
+
+
