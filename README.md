@@ -72,15 +72,16 @@ git clone https://github.com/Charlesvdb/Seraphin.git
 # CODE
 
 ## app.js file
-Starts server & does body-parser
+Starts server (localhost: 8080). Express framework and body-parser (to help parsing the body of the request) middleware are used here.
 
 ## insuranceQuotes.js
-Does the initial body parameters validation.
-Checks for missing parameters or incorrect values. 
+Does the initial body parameters validation. I used express-validator for this validation (checks for missing parameters or incorrect values). 
+POST route:    http://localhost:8080/v1/quote/car-insurances
+This then calls the insuranceQuotesControllers file (insuranceQuoteController.postInsuranceQuotes)
 
 ## insuranceQuotesControllers.js
 Calculates civil liability & omnium premiums.
-Decided to keep background calculations (age, civil liability, omnium) in this file (instead of creating a calculations file) to keep it simple.
+I decided to keep background calculations (age, civil liability, omnium) in this file (instead of creating a calculations file) to keep it simple.
 Sends back correct message (200 status vs. 400 status).
 
 ## TESTING
