@@ -15,6 +15,8 @@ Simple insurance product with 2 key components:
 - Not eligible for drivers under 18 years old (excluded)
 - Costs 3% of the value of the car
 
+Key here is that initial body parameters validation decides between 400 or 200 status message.
+
 _________________________________________________________________
 
 # Node.js HTTP REST API
@@ -61,12 +63,13 @@ Body Parameters:
 
 # HOW TO USE (TODO)
 
+## Terminal
 git clone REPO_NAME
 cd REPO_NAME
 npm install
 npm run test
 
-//Curl example
+## Curl example
     curl -X POST -H "Content-Type: application/json" localhost:8080/api/v1/quote/car-insurance --data '{"car_value": 20000.0, "driver_birthdate": "15/10/1990"}'
 
 # CODE
