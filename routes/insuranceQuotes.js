@@ -15,4 +15,3 @@ router.post("/v1/quote/car-insurance", [
 ], insuranceQuoteController.postInsuranceQuotes);
 
 module.exports = router
-
